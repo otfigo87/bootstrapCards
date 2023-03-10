@@ -1,16 +1,20 @@
 import React from "react";
 import "./styles.css";
-//import card1
-import Card1 from "./components/Card1";
-import Card2 from "./components/Card2";
+import Card from "./components/Card";
+import cardsArr from './data'
 
 export default function App() {
+
+  const cards = cardsArr.map((ele, index) => (
+      <Card key={index} {...ele} />
+    ));
+  console.log("this is cards:", cards);
+
   return (
     <div className="App">
       <h1>Bootstrap Cards To Component Example</h1>
       <section className="cards">
-        <Card1 />
-        <Card2 />
+        {cards}
       </section>
     </div>
   );

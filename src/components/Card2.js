@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card2 = () => {
+const Card2 = (props) => {
   return (
     <div className="card" style={{ width: "18rem" }}>
       <img
